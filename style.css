@@ -6,6 +6,7 @@
 	min-height:100vh;
 	display:grid;
 	grid-template-rows: auto 1fr auto;
+	font-size:1.5em;
     }
     
     #container {
@@ -58,12 +59,13 @@
     }
     
     #center-box {
-    flex: 1;
-    padding: 10px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+      padding: 10px;
+      justify-content: center;
+      display: grid;
+      align-items: center;
+      width: 100%;
+      grid-template-columns: auto auto;
+      column-gap: 50px;
     }
     
     .large-rectangle {
@@ -76,6 +78,7 @@
       background-color: #FF9F1C;
       margin-bottom: 20px;
       padding: 10px;
+	flex: 1 1 calc(50% - 50px);
     }
     
     .large-rectangle p {
