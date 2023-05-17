@@ -66,6 +66,9 @@
       width: 100%;
       grid-template-columns: auto auto;
       column-gap: 50px;
+      row-gap: 50px;
+      justify-content: center;
+      align-content: center
     }
     
     .large-rectangle {
