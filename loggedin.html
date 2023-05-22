@@ -1,46 +1,61 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Machst Du schon oder klebst Du noch?</title>
-  <link rel="stylesheet" href="style.css" type="text/css">
-</head>
-<body>
-<header id="top-bar">
-  <div id="top-left"><img class="icon" src="medal.png" /></div>
-  <div id="top-center">  
-    <h1 style="color:#00B050;text-align:center;">Machst Du schon oder klebst Du noch?</h1>
-    <h2 style="color:white;text-align:center;">Runter von der Straße und rein ins Beet</h2>
-  </div>
-  <div id="top-right">  <a href=""><img class="icon" src="harold.png" alt="Login"></a></div>
-</header>
-  <div id="container">
-    <div id="left-box">
-      <p>Du hast 3 Projekte unterstützt</p>
-      <p>40 Projekte in Wernershausen erfolgreich</p>
-      <p>105 Wettbewerbe in Deinem Landkreis</p>
-    </div>
-    <div id="center-box">
-      <div class="large-rectangle">
-        <h3>Ich hab einen Baum gepflanzt</h3><p>4 Bäume bis Platz 1</p>
-      </div>
-      <div class="large-rectangle">
-        <h3>Ich und meine Urkunden</h3><p>3. Platz für Wernershausen</p>
-      </div>
-      <div class="large-rectangle">
-        <h3>Ich will noch mehr</h3><p>Noch 104 weitere Wettbewerbe</p>
-      </div>
-      <div class="large-rectangle">
-        <h3>Ich und Du für das Klima</h3><p>Hier Netzwerken</p>
-      </div>
-    </div>
-    <div id="right-box">
-      <p>Dein Einsatz entspricht der Einsparung von 15 Bäumen. Weiter so!</p>
-    </div>
-  </div>
-  <div id="bottom-bar">
-    <p style="text-align: left;">Wernerhausen gräbt um - Bürgergarten sucht Staudenspenden</p>
-    <p style="text-align: right;">Mai 2023: Blümchen und Bienchen - Weiler wird bunt</p>
-  </div>
-</body>
+<html class="h-100">
+	<head>
+		<meta charset="UTF-8">
+		<title>Machst Du schon oder klebst Du noch?</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="bootstrap.minty.css" rel="stylesheet">
+	</head>
+	<body style="background-size: 100% auto; background-image: url('background.jpg')" class="cover-container h-100 d-flex flex-column">
+		<header class="opacity-75 bg-light d-flex justify-content-between mb-auto bg">
+			<div class="flex-shrink-1"><img style="width:64px;height:64px;" src="medal.png" /></div>
+			<div class="flex-grow-1 text-center">
+				<h1>Machst Du schon oder klebst Du noch?</h1>
+				<h2>Runter von der Straße und rein ins Beet</h2>
+			</div>
+			<div class="flex-shrink-1">  <a href=""><img style="width:64px;height:64px;" src="harold.png" alt="Login"></a></div>
+		</header>
+		<main class="">
+			<div class="row align-items-center">
+				<div class="bg-light opacity-75 col col-2 border-top border-bottom border-primary flex-shrink-1">
+					<p>Du hast 3 Projekte unterstützt</p>
+					<p>40 Projekte in Wernershausen erfolgreich</p>
+					<p>105 Wettbewerbe in Deinem Landkreis</p>
+				</div>
+				<div class="col-auto justify-content-center flex-grow-1">
+					<div class="row justify-content-center g-5 row-cols-2">
+						<button class="col-5 btn mx-3 btn-primary">
+							<h3>Ich und der Baum</h3>
+							<p>4 Bäume bis Platz 1</p>
+						</button>
+						<button class="col-5 btn mx-3 btn-primary">
+							<h3>Ich und meine Urkunden</h3>
+							<p>3. Platz für Wernershausen</p>
+						</button>
+						<button class="col-5 btn mx-3 btn-primary">
+							<h3>Ich will noch mehr</h3>
+							<p>Noch 104 weitere Wettbewerbe</p>
+						</button>
+						<button class="col-5 btn mx-3 btn-primary">
+							<h3>Ich und Du fürs Klima</h3>
+							<p>Hier Netzwerken</p>
+						</button>
+					</div>
+				</div>
+				<div class="col col-2">
+					<div class="btn btn-dark position-relative">
+						Dein Einsatz entspricht der Einsparung von 15 Bäumen. Weiter so!
+						<svg width="2em" height="3em" viewBox="0 0 16 16" class="position-absolute top-100 start-50 translate-middle mt-1" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+						</svg>
+					</div>
+					<img class="d-block mx-auto" style="height:64px;width:64px" src="tree.png" />
+				</div>
+			</div>
+		</main>
+		<footer class="opacity-75 row align-items-center justify-content-between mt-auto bg-light">
+			<p class="col align-middle">Wernerhausen gräbt um - Bürgergarten sucht Staudenspenden</p>
+			<p class="col text-end">Mai 2023: Blümchen und Bienchen - Weiler wird bunt</p>
+		</footer>
+	</body>
 </html>
