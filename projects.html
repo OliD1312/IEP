@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="h-100">
+	<head>
+		<meta charset="UTF-8">
+		<title>Machst Du schon oder klebst Du noch?</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="bootstrap.minty.css" rel="stylesheet">
+	</head>
+	<body style="background-size: cover; background-image: url('background.jpg');background-repeat: no-repeat;background-attachment: fixed;" class="mx-xl-3 cover-container h-100 d-flex flex-column">
+		<header class="opacity-75 bg-light d-flex justify-content-between mb-auto bg">
+			<div class="flex-shrink-1"><a href="index.html"><img style="width:64px;height:64px;" src="medal.png" /></a></div>
+			<div class="flex-grow-1 text-center">
+				<h1>Machst Du schon oder klebst Du noch?</h1>
+				<h2 class="d-none d-xl-block" >Runter von der Straße und rein ins Beet</h2>
+			</div>
+			<div class="flex-shrink-1">  <a href=""><img style="width:64px;height:64px;" src="login_symbol.png" alt="Login"></a></div>
+		</header>
+		<main class="">
+			<div class="row align-items-center">
+				<div class="bg-light my-3 opacity-75 col-8 offset-2 border border-primary flex-shrink-1">
+					<p>Ort</p>
+					<select id="citySelect" class="form-select" onchange="citySelect()">
+						<option selected>Alle Orte</option>
+						<option>Gadebusch</option>
+						<option>Gottmadingen</option>
+					</select>
+					<script>
+						function citySelect() {
+						  var x = document.getElementById("citySelect");
+						  const matches = document.querySelectorAll(".col");
+							matches.forEach((userItem) => {
+						if (userItem.classList.contains(x.value) || x.value == "Alle Orte"){
+								userItem.classList.remove('d-none');
+						}else{
+						 		userItem.classList.add('d-none');
+						}
+							});
+						}
+					</script>
+				</div>
+				<div class="col-auto justify-content-center ">
+					<div class="row justify-content-center g-3 g-xl-5 row-cols-2">
+						<div class="col Gottmadingen City col-xl-5 mx-2">
+							<div class="card h-100 bg-opacity-75 border-dark">
+								<h4 class="card-header bg-primary">Wettbewerb (09.06.2023 - 19.07.2023)</h4>
+								<img style="height:128px;width:128px;" src="stadtradeln.svg" />
+								<div class="card-body">
+									<h5 class="card-title">Stadtradeln</h5>
+									<p class="card-text">STADTRADELN ist ein Wettbewerb, bei dem es darum geht, 21 Tage lang möglichst viele Alltagswege klimafreundlich mit dem Fahrrad zurückzulegen. Dabei ist es egal, ob du bereits jeden Tag fährst oder bisher eher selten mit dem Rad unterwegs bist. Jeder Kilometer zählt – erst recht wenn du ihn sonst mit dem Auto zurückgelegt hättest.</p>
+								</div>
+								<div class="card-footer">
+									<a class="btn btn-primary" href="https://www.stadtradeln.de/gottmadingen">Mitradeln in Gottmadingen</a> 
+									<a class="btn btn-secondary" href="https://www.stadtradeln.de/anmelden">Eine andere Kommune anmelden</a>
+								</div>
+							</div>
+						</div>
+						<div class="col Gadebusch City col-xl-5 mx-2">
+							<div class="card  h-100 bg-opacity-75 border-dark">
+								<h4 class="card-header bg-primary">Projekt (16.03.2024)</h4>
+								<div class="card-body">
+									<img src="deutschlandforstetauf.svg" style="height:128px;width:128px;" />
+									<h5 class="card-title">Flächenräumung / Zaunbau in Gadebusch</h5>
+									<p class="card-text">Auf einer bisher als Pferdekoppel genutzten Fläche von 0,6 Ha soll eine Streuobstwiese aus Walnüssen entstehen. An diesem Termin wollen wir die Voraussetzung dafür schaffen. Dazu muss die Fläche von Aufwuchs befreit und Ästen beiseite geräumt werden. Ferner soll die Zauntrasse vorbereitet werden. Hierzu gehört die Markierung der Trasse mittels Schnur und Farbsprühdose sowie das Verteilen und Setzen der Eichenpfähle. Sofern wir noch Zeit haben, beginnen wir mit dem Zaunbau. Auch die Pflanzlöcher für die Walnussbäume können bereits gebohrt werden. Die Pflanzung selber findet an einem weiteren Termin statt.</p>
+								</div>
+								<div class="card-footer">
+									<a class="btn btn-primary" href="https://deutschland-forstet-auf.de/aktionstag/agroforst-flaechenraeumung-zaunbau/">Teilnehmen</a>
+									<a class="btn btn-secondary" href="https://deutschland-forstet-auf.de/forstleute-waldbesitzende/">Aktion in meinem Wald anlegen</a>
+								</div>
+							</div>
+						</div>
+						<div class="col Gottmadingen City col-xl-5 mx-2">
+							<div class="card h-100 bg-opacity-75 border-dark">
+								<h4 class="card-header bg-primary">Veranstaltung (26.05.2024)</h4>
+								<img style="height:128px;width:128px;" src="slowup.png" />
+								<div class="card-body">
+									<h5 class="card-title">Slow Up</h5>
+									<p class="card-text">Der Slow Up Schaffhausen-Hegau wird jedes Jahr veranstaltet und bietet den Bürgern CO2 neutrale Ausflugsziele.<br/>
+									<p>Das slowUp-Rezept ist so einfach wie überzeugend: Man nehme breite Strassen in einer attraktiven Landschaft, sperre sie einen Tag für den motorisierten Verkehr und sorge für ein vielseitiges Rahmenprogramm entlang der Strecke. Daraus wird ein Fest, anders als alle anderen: Jung und Alt, Familien und Singles, Bewegungsmenschen und Genussmenschen geniessen die fröhliche Stimmung im motorfreien Ambiente.</p>
+									</p>
+								</div>
+								<div class="card-footer">
+									<a class="btn btn-primary" href="https://www.slowup.ch/schaffhausen-hegau/de.html">Slow Up</a>
+									<a class="btn btn-secondary" href="https://www.slowup.ch/schaffhausen-hegau/de/idee-kontakt/kontakt.html">Kontakt für Vereine</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="opacity-75 row align-items-center justify-content-between mt-auto bg-light">
+			<p class="col align-middle">Wernerhausen gräbt um - Bürgergarten sucht Staudenspenden</p>
+			<p class="col text-end">Mai 2023: Blümchen und Bienchen - Weiler wird bunt</p>
+		</footer>
+	</body>
+</html>
