@@ -90,8 +90,20 @@
 			</div>
 		</main>
 		<footer class="opacity-75 row align-items-center justify-content-between mt-auto bg-light">
-			<p class="col align-middle">Wernerhausen gräbt um - Bürgergarten sucht Staudenspenden</p>
-			<p class="col text-end">Mai 2023: Blümchen und Bienchen - Weiler wird bunt</p>
+			<p class="col text-center align-middle">Datenschutz Impressum AGB</p>
 		</footer>
+					<script>
+						const params = new Proxy(new URLSearchParams(window.location.search), {
+							get: (searchParams, prop) => searchParams.get(prop),
+						});
+						// Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+						let cityParam = params.city; // "some_value"
+						var x = document.getElementById("citySelect");
+						console.log(cityParam);
+						if (cityParam != null && cityParam != ""){
+							x.value = cityParam;
+							x.dispatchEvent(new Event('change'))
+						}
+					</script>
 	</body>
 </html>
