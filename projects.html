@@ -7,8 +7,8 @@
 		<meta name="robots" content="noindex">
 		<link href="bootstrap.minty.css" rel="stylesheet">
 	</head>
-	<body style="background-size: cover; background-image: url('background.jpg');background-repeat: no-repeat;background-attachment: fixed;" class="mx-xl-3 cover-container h-100 d-flex flex-column">
-		<header class="opacity-75 bg-light d-flex">
+	<body style="background-size: cover; background-image: url('background.jpg');background-repeat: no-repeat;background-attachment: fixed;" class="cover-container h-100 d-flex flex-column">
+		<header class="text-bg-primary d-flex justify-content-between mb-auto">
 			<div class="flex-shrink-1"><a href="index.html"><img id="medal" style="width:64px;height:64px;" src="medal.png" /></a></div>
 			<div class="flex-grow-1 text-center">
 				<h1>Machst Du schon oder klebst Du noch?</h1>
@@ -65,6 +65,23 @@
 								</div>
 							</div>
 						</div>
+						<div class="col Gottmadingen City col-xl-5 mx-2">
+							<div class="card h-100 bg-opacity-75 border-dark">
+								<h4 class="card-header bg-primary">Projekt (07.10.2023)</h4>
+								<img style="height:128px;width:128px;" src="naturfreunde.gif" />
+								<div class="card-body">
+									<h5 class="card-title">Gartenbauprojekt Naturfreunde</h5>
+									<p onclick="toggleTruncate(this)" class="card-text text-truncate">Entwicklung eines naturnahen Gartens durch die Kindergruppe, welcher langfristig als 
+Begegnungsstätte für alle Naturfreunde dient
+Dies erfolgt mit Unterstützung der Erwachsenen auf einem von der Gemeinde Gottmadingen zur 
+Verfügung gestellten Grundstück hinter dem Bauhof und in Verlängerung zur Tagespflege St. Martin
+									</p>
+								</div>
+								<div class="card-footer">
+									<a class="btn btn-primary" href="https://www.naturfreunde-gottmadingen.de/images/Auschreibungen/2023/Infos_zum_Gartenprojekt_der_Naturfreunde_Gottmadingen_Jan_2023.pdf">Projekt Beschreibung</a>
+								</div>
+							</div>
+						</div>
 						<div class="col Gadebusch City col-xl-5 mx-2">
 							<div class="card  h-100 bg-opacity-75 border-dark">
 								<h4 class="card-header bg-primary">Projekt (16.03.2024)</h4>
@@ -99,8 +116,8 @@
 				</div>
 			</div>
 		</main>
-		<footer class="opacity-75 row align-items-center justify-content-between mt-auto bg-light">
-			<p class="col text-center align-middle">Datenschutz Impressum AGB</p>
+		<footer class="opacity-75 mt-auto bg-light">
+			<div class="row text-center justify-content-center"><a class="col-2">Datenschutz</a><a class="col-2">Impressum</a><a class="col-2">AGB</a></div>
 		</footer>
 					<script>
 						const params = new Proxy(new URLSearchParams(window.location.search), {
