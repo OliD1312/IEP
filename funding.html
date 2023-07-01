@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html class="h-100">
+	<head>
+		<meta charset="UTF-8">
+		<title>Machst Du schon oder klebst Du noch?</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="robots" content="noindex">
+		<link href="bootstrap.minty.css" rel="stylesheet">
+	</head>
+	<body style="background-size: cover; background-image: url('background.jpg');background-repeat: no-repeat;background-attachment: fixed;" class="cover-container h-100 d-flex flex-column">
+		<nav class="navbar navbar-expand bg-primary mb-auto">
+			<div class="navbar-brand me-auto">
+				<h1 class="">F.U.K.K.</h1>
+				<h2 class="d-none d-xl-block text-body-secondary" >Für unsere Klimaaktive Kommune</h2>
+			</div>
+			<div class="navbar-nav me-3 me-xl-5">
+				<a href="funding.html" class="btn btn-outline-warning mx-1">Geld</a>
+				<a href="idea.html" class="btn btn-outline-light mx-1">Idee</a>
+				<a href="projects.html" class="btn btn-outline-light mx-1">Aktion</a>
+				<a href="questions.html" class="btn btn-outline-light mx-1">Hilfe</a>
+			</div>
+			<ul class="navbar-nav">
+				<li class="nav-item"><a href="#register" class="nav-link active">Registrieren</a></li>
+				<li class="nav-item"><a href="#login" class="nav-link active">Anmelden</a></li>
+			</ul>
+		</nav>
+		<main class="">
+			<div class="row">
+				<div class="bg-light my-3 opacity-75 col-8 offset-2 border border-primary flex-shrink-1">
+					<p>Ort</p>
+					<select id="citySelect" class="form-select" onchange="citySelect()">
+						<option selected>Alle Orte</option>
+						<option>Gadebusch</option>
+						<option>Gottmadingen</option>
+					</select>
+					<script>
+						function citySelect() {
+						  var x = document.getElementById("citySelect");
+							var image = document.getElementById("medal");
+							if (x.value == "Alle Orte"){
+								image.src = "medal.png";
+							}else{
+								image.src = "shield.png";
+							}
+						  const matches = document.querySelectorAll(".col");
+							matches.forEach((userItem) => {
+						if (userItem.classList.contains(x.value) || x.value == "Alle Orte"){
+								userItem.classList.remove('d-none');
+						}else{
+						 		userItem.classList.add('d-none');
+						}
+							});
+						}
+	
+						function toggleTruncate(element){
+							element.classList.toggle("text-truncate");
+						}
+					</script>
+				</div>
+				<div class="col-auto justify-content-center ">
+					<div class="row justify-content-center g-3 g-xl-5 row-cols-2">
+						<div class="col Gottmadingen City col-xl-5 mx-2">
+							<div class="card h-100 bg-opacity-75 border-dark">
+								<h4 class="card-header bg-primary">Wettbewerb (09.06.2023 - 19.07.2023)</h4>
+								<img style="height:128px;width:128px;" src="stadtradeln.svg" />
+								<div class="card-body">
+									<h5 class="card-title">Stadtradeln</h5>
+									<p onclick="toggleTruncate(this)" class="card-text text-truncate">STADTRADELN ist ein Wettbewerb, bei dem es darum geht, 21 Tage lang möglichst viele Alltagswege klimafreundlich mit dem Fahrrad zurückzulegen. Dabei ist es egal, ob du bereits jeden Tag fährst oder bisher eher selten mit dem Rad unterwegs bist. Jeder Kilometer zählt – erst recht wenn du ihn sonst mit dem Auto zurückgelegt hättest.</p>
+								</div>
+								<div class="card-footer">
+									<a class="btn btn-primary" href="https://www.stadtradeln.de/gottmadingen">Mitradeln in Gottmadingen</a> 
+									<a class="btn btn-secondary" href="https://www.stadtradeln.de/anmelden">Eine andere Kommune anmelden</a>
+								</div>
+							</div>
+						</div>
+						<div class="col Gottmadingen City col-xl-5 mx-2">
+							<div class="card h-100 bg-opacity-75 border-dark">
+								<h4 class="card-header bg-primary">Projekt (07.10.2023)</h4>
+								<img style="height:128px;width:128px;" src="naturfreunde.gif" />
+								<div class="card-body">
+									<h5 class="card-title">Gartenbauprojekt Naturfreunde</h5>
+									<p onclick="toggleTruncate(this)" class="card-text text-truncate">Entwicklung eines naturnahen Gartens durch die Kindergruppe, welcher langfristig als 
+Begegnungsstätte für alle Naturfreunde dient
+Dies erfolgt mit Unterstützung der Erwachsenen auf einem von der Gemeinde Gottmadingen zur 
+Verfügung gestellten Grundstück hinter dem Bauhof und in Verlängerung zur Tagespflege St. Martin
+									</p>
+								</div>
+								<div class="card-footer">
+									<a class="btn btn-primary" href="https://www.naturfreunde-gottmadingen.de/images/Auschreibungen/2023/Infos_zum_Gartenprojekt_der_Naturfreunde_Gottmadingen_Jan_2023.pdf">Projekt Beschreibung</a>
+								</div>
+							</div>
+						</div>
+						<div class="col Gadebusch City col-xl-5 mx-2">
+							<div class="card  h-100 bg-opacity-75 border-dark">
+								<h4 class="card-header bg-primary">Projekt (16.03.2024)</h4>
+								<div class="card-body">
+									<img src="deutschlandforstetauf.svg" style="height:128px;width:128px;" />
+									<h5 class="card-title">Flächenräumung / Zaunbau in Gadebusch</h5>
+									<p onclick="toggleTruncate(this)" class="card-text text-truncate">Auf einer bisher als Pferdekoppel genutzten Fläche von 0,6 Ha soll eine Streuobstwiese aus Walnüssen entstehen. An diesem Termin wollen wir die Voraussetzung dafür schaffen. Dazu muss die Fläche von Aufwuchs befreit und Ästen beiseite geräumt werden. Ferner soll die Zauntrasse vorbereitet werden. Hierzu gehört die Markierung der Trasse mittels Schnur und Farbsprühdose sowie das Verteilen und Setzen der Eichenpfähle. Sofern wir noch Zeit haben, beginnen wir mit dem Zaunbau. Auch die Pflanzlöcher für die Walnussbäume können bereits gebohrt werden. Die Pflanzung selber findet an einem weiteren Termin statt.</p>
+								</div>
+								<div class="card-footer">
+									<a class="btn btn-primary" href="https://deutschland-forstet-auf.de/aktionstag/agroforst-flaechenraeumung-zaunbau/">Teilnehmen</a>
+									<a class="btn btn-secondary" href="https://deutschland-forstet-auf.de/forstleute-waldbesitzende/">Aktion in meinem Wald anlegen</a>
+								</div>
+							</div>
+						</div>
+						<div class="col Gottmadingen City col-xl-5 mx-2">
+							<div class="card h-100 bg-opacity-75 border-dark">
+								<h4 class="card-header bg-primary">Veranstaltung (26.05.2024)</h4>
+								<img style="height:128px;width:128px;" src="slowup.png" />
+								<div class="card-body">
+									<h5 class="card-title">Slow Up</h5>
+									<p onclick="toggleTruncate(this)" class="card-text text-truncate">Der Slow Up Schaffhausen-Hegau wird jedes Jahr veranstaltet und bietet den Bürgern CO2 neutrale Ausflugsziele.<br/>
+									Das slowUp-Rezept ist so einfach wie überzeugend: Man nehme breite Strassen in einer attraktiven Landschaft, sperre sie einen Tag für den motorisierten Verkehr und sorge für ein vielseitiges Rahmenprogramm entlang der Strecke. Daraus wird ein Fest, anders als alle anderen: Jung und Alt, Familien und Singles, Bewegungsmenschen und Genussmenschen geniessen die fröhliche Stimmung im motorfreien Ambiente.
+									</p>
+								</div>
+								<div class="card-footer">
+									<a class="btn btn-primary" href="https://www.slowup.ch/schaffhausen-hegau/de.html">Slow Up</a>
+									<a class="btn btn-secondary" href="https://www.slowup.ch/schaffhausen-hegau/de/idee-kontakt/kontakt.html">Kontakt für Vereine</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="opacity-75 mt-auto bg-light">
+			<div class="row text-center justify-content-center"><a class="col-2">Datenschutz</a><a class="col-2">Impressum</a><a class="col-2">AGB</a></div>
+		</footer>
+					<script>
+						const params = new Proxy(new URLSearchParams(window.location.search), {
+							get: (searchParams, prop) => searchParams.get(prop),
+						});
+						// Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+						let cityParam = params.city; // "some_value"
+						var x = document.getElementById("citySelect");
+						console.log(cityParam);
+						if (cityParam != null && cityParam != ""){
+							x.value = cityParam;
+							x.dispatchEvent(new Event('change'))
+						}
+					</script>
+	</body>
+</html>

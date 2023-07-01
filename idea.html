@@ -34,7 +34,7 @@
 					</div>
 					<div class="form-floating mb-3">
 						<label for="projectDescription" class="">Beschreibung</label>
-						<textArea class="form-control" id="projectDescription" rows="5" placeholder="Beschreibung des Projekts"></textArea>
+						<textArea class="form-control" id="projectDescription" style="height:70%;" placeholder="Beschreibung des Projekts"></textArea>
 					</div>
 				</div>
 				<div class="bg-light mt-3 ms-3 col border border-primary">
@@ -59,13 +59,23 @@
 						</select>
 						<label for="projectTemplate" class="">Vorlage</label>
 					</div>
+					<div class="form-floating mb-3">
+						<select class="form-select" id="projectTemplate" type="date" placeholder="Art des Projekts">
+							<option>Mit-Mach Aktion</option>
+							<option>Challenge</option>
+							<option>Kommunal Wettbewerb</option>
+							<option>Veranstaltung</option>
+						</select>
+						<label for="projectTemplate" class="">Typ</label>
+					</div>
+
 				</div>
 
 					<div class="col mt-3 ms-3 bg-light border border-primary">
 						<label>Ressourcen</label>
 						<div class="form-check form-switch">
 							<input class="form-check-input" id="RessourceCrowd" type="checkbox" />
-							<label class="form-check-label" for="RessourceCrowd">Crowd Funding</label>
+							<label class="form-check-label" for="RessourceCrowd">Geld</label>
 						</div>
 						<div class="form-check form-switch">
 							<input class="form-check-input" id="RessourceSocial" type="checkbox" />
@@ -73,7 +83,7 @@
 						</div>
 						<div class="form-check form-switch">
 							<input class="form-check-input" id="RessourceLand" type="checkbox" />
-							<label class="form-check-label" for="RessourceLand">Grunstück</label>
+							<label class="form-check-label" for="RessourceLand">Grundstück</label>
 						</div>
 						<div class="form-check form-switch">
 							<input class="form-check-input" id="RessourceWorker" type="checkbox" />

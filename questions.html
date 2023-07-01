@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="robots" content="noindex">
 		<link href="bootstrap.minty.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 	</head>
 	<body style="background-size: cover; background-image: url('background.jpg');background-repeat: no-repeat;background-attachment: fixed;" class="cover-container h-100 d-flex flex-column">
 		<nav class="navbar navbar-expand bg-primary mb-auto">
@@ -24,8 +25,26 @@
 				<li class="nav-item"><a href="#login" class="nav-link active">Anmelden</a></li>
 			</ul>
 		</nav>
+		<script>
+			function ideaSelect(ideaNumber){
+				var x = document.getElementById("idea-"+ideaNumber);
+				console.log("x:" + x);
+				const matches = document.querySelectorAll(".card");
+				matches.forEach((userItem) => {
+					console.log("x:" + x + " userItem: " + userItem);
+					if (userItem == x){
+						console.log("Match!");
+						userItem.classList.remove('d-none');
+					}else{
+						console.log("No Match!");
+						userItem.classList.add('d-none');
+					}
+				});
+			}
+
+		</script>
 		<main class="container-lg">
-							<div class="card border-dark">
+							<div id="idea-1" class="card border-dark">
 								<h4 class="card-header text-bg-primary">Solaranlage</h4>
 								<img style="height:128px;width:128px;" src="solar-panel.png" />
 								<div class="card-body">
@@ -34,13 +53,71 @@
 								</div>
 								<div class="card-footer ">
 									<span class="btn-group me-5">
-									<a class="btn btn-lg ms-1 btn-primary">Vollflächig</a> 
-									<a class="btn btn-lg ms-1 btn-primary">Teilweise</a> 
+										<a onclick="ideaSelect(2)" class="btn btn-lg ms-1 btn-primary">Vollflächig</a> 
+										<a onclick="ideaSelect(128)" class="btn btn-lg ms-1 btn-primary">Teilweise</a> 
 									</span>
 									<span class="btn-group">
-									<a class="btn btn-lg ms-1 btn-secondary">Kann ich nicht</a>
-									<a class="btn btn-lg ms-1 btn-secondary">Darf nicht</a>
-									<a class="btn btn-lg ms-1 btn-secondary">Will nicht</a>
+										<a onclick="ideaSelect(2)" class="btn btn-lg ms-1 btn-secondary">Kann ich nicht</a>
+										<a onclick="ideaSelect(2)" class="btn btn-lg ms-1 btn-secondary">Darf nicht</a>
+										<a class="btn btn-lg ms-1 btn-secondary">Will nicht</a>
+									</span>
+								</div>
+							</div>
+							<div id="idea-2" class="card border-dark d-none">
+								<h4 class="card-header text-bg-primary">Solaranlage</h4>
+								<i class="bi bi-flower1"></i>
+
+								<div class="card-body">
+									<h5 class="card-title">Garten umgestalten</h5>
+									<p onclick="toggleTruncate(this)" class="card-text text-truncate">Kannst Du Deinen Garten umgestalten?</p>
+								</div>
+								<div class="card-footer ">
+									<span class="btn-group me-5">
+										<a class="btn btn-lg ms-1 btn-primary">Ist bereits klimafreundlich</a> 
+										<a class="btn btn-lg ms-1 btn-primary">Tolle Idee!</a> 
+									</span>
+									<span class="btn-group">
+										<a class="btn btn-lg ms-1 btn-secondary">Kann ich nicht</a>
+										<a class="btn btn-lg ms-1 btn-secondary">Darf nicht</a>
+										<a class="btn btn-lg ms-1 btn-secondary">Will nicht</a>
+									</span>
+								</div>
+							</div>
+							<div id="idea-2" class="card border-dark d-none">
+								<h4 class="card-header text-bg-primary">Mobilität</h4>
+								<img style="height:128px;width:128px;" src="solar-panel.png" />
+								<div class="card-body">
+									<h5 class="card-title">Garten umgestalten</h5>
+									<p onclick="toggleTruncate(this)" class="card-text text-truncate">Kannst Du Deinen Garten umgestalten?</p>
+								</div>
+								<div class="card-footer ">
+									<span class="btn-group me-5">
+										<a class="btn btn-lg ms-1 btn-primary">Ist bereits klimafreundlich</a> 
+										<a class="btn btn-lg ms-1 btn-primary">Tolle Idee!</a> 
+									</span>
+									<span class="btn-group">
+										<a class="btn btn-lg ms-1 btn-secondary">Kann ich nicht</a>
+										<a class="btn btn-lg ms-1 btn-secondary">Darf nicht</a>
+										<a class="btn btn-lg ms-1 btn-secondary">Will nicht</a>
+									</span>
+								</div>
+							</div>
+							<div id="idea-128" class="card border-dark d-none">
+								<h4 class="card-header text-bg-primary">Solaranlage</h4>
+								<img style="height:128px;width:128px;" src="solar-panel.png" />
+								<div class="card-body">
+									<h5 class="card-title">Solar Anlage erweitern</h5>
+									<p onclick="toggleTruncate(this)" class="card-text text-truncate">Möchtest Du Deine Solaranlage erweitern für mehr Kapazität?</p>
+								</div>
+								<div class="card-footer ">
+									<span class="btn-group me-5">
+										<a class="btn btn-lg ms-1 btn-primary">Erstelle mir ein Angebot</a> 
+										<a class="btn btn-lg ms-1 btn-primary">Nein, aber ein Batteriespeicher.</a> 
+									</span>
+									<span class="btn-group">
+										<a class="btn btn-lg ms-1 btn-secondary">Kann ich nicht</a>
+										<a class="btn btn-lg ms-1 btn-secondary">Darf nicht</a>
+										<a class="btn btn-lg ms-1 btn-secondary">Will nicht</a>
 									</span>
 								</div>
 							</div>
