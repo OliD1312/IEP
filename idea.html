@@ -9,35 +9,38 @@
 	</head>
 	<body style="background-size: cover; background-image: url('background.jpg');background-repeat: no-repeat;background-attachment: fixed;" class="cover-container h-100 d-flex flex-column">
 		<nav class="navbar navbar-expand bg-primary mb-auto">
-			<div class="navbar-brand me-auto">
+			<div class="navbar-brand mx-3 me-auto">
 				<h1 class="">F.U.K.K.</h1>
 				<h2 class="d-none d-xl-block text-body-secondary" >Für unsere Klimaaktive Kommune</h2>
 			</div>
 			<div class="navbar-nav me-3 me-xl-5">
 				<a href="funding.html" class="btn btn-outline-light mx-1">Geld</a>
-				<a class="btn btn-outline-warning mx-1">Idee</a>
-				<a href="projects.html" class="btn btn-outline-light mx-1">Aktion</a>
+				<a href="idea.html" class="btn btn-outline-warning mx-1">Idee</a>
+				<a href="projects.html" class="btn btn-outline-light  mx-1">Aktion</a>
 				<a href="questions.html" class="btn btn-outline-light mx-1">Hilfe</a>
 			</div>
 			<ul class="navbar-nav">
-				<li class="nav-item"><a href="#register" class="nav-link active">Registrieren</a></li>
-				<li class="nav-item"><a href="#login" class="nav-link active">Anmelden</a></li>
+				<li class="nav-item"><a href="#register" class="nav-link active">1024 Punkte</a></li>
+				<li class="nav-item"><a href="swantje.html?city=Stralendorf" class="nav-link active"><img style="height:32px;width:32px;border-radius:100px;" src="swantje.jpg" /> Swantje</a></li>
 			</ul>
 		</nav>
+
 		<main class="">
 			<form>
 			<div class="row row-cols-3">
-				<div class="bg-light mt-3 ms-3 col border border-primary">
+				<div class="card bg-light mt-3 ms-3 col border border-primary">
+					<h4 class="card-header">Übersicht</h4>
 					<div class="form-floating mb-3">
 						<input class="form-control" id="projectName" required placeholder="Name des Projekts"/>
 						<label for="projectName" class="">Name</label>
 					</div>
 					<div class="form-floating mb-3">
 						<label for="projectDescription" class="">Beschreibung</label>
-						<textArea class="form-control" id="projectDescription" style="height:70%;" placeholder="Beschreibung des Projekts"></textArea>
+						<textArea class="form-control" id="projectDescription" style="height:15em;" placeholder="Beschreibung des Projekts"></textArea>
 					</div>
 				</div>
-				<div class="bg-light mt-3 ms-3 col border border-primary">
+				<div class="card bg-light mt-3 ms-3 col border border-primary">
+					<h4 class="card-header">Details</h4>
 					<div class="mb-3">
 						<label for="projectStart" class="">Start</label>
 						<input id="projectStart" type="date" placeholder="Start des Projekts"/>
@@ -47,7 +50,7 @@
 					</div>
 					<div class="form-floating mb-3">
 						<select class="form-select" id="projectTarget" type="date" placeholder="Zielgruppe des Projekts">
-							<option>Bürger aus Horstwald</option>
+							<option>Bürger aus Würzburg</option>
 							<option>Alle Bürger</option>
 						</select>
 						<label for="projectTarget" class="">Zielgruppe</label>
@@ -71,8 +74,8 @@
 
 				</div>
 
-					<div class="col mt-3 ms-3 bg-light border border-primary">
-						<label>Ressourcen</label>
+					<div class="card col mt-3 ms-3 bg-light border border-primary">
+						<h4 class="card-header">Ressourcen</h4>
 						<div class="form-check form-switch">
 							<input class="form-check-input" id="RessourceCrowd" type="checkbox" />
 							<label class="form-check-label" for="RessourceCrowd">Geld</label>
@@ -91,28 +94,23 @@
 						</div>
 
 					</div>
-					<div class="col mt-3 ms-3 bg-light border-primary">
-						<label>Sponsoren</label>
+					<div class="card col mt-3 ms-3 bg-light border-primary">
+						<h4 class="card-header">Sponsoren</h4>
 						<div class="form-check form-switch">
 							<input class="form-check-input" id="RessourceCrowd" type="checkbox" />
-							<label class="form-check-label" for="RessourceCrowd">Sparkasse / Volksbank</label>
+							<label class="form-check-label" for="RessourceCrowd"><img style="height:64px;" src="vr.png" /></label>
 						</div>
 						<div class="form-check form-switch">
 							<input class="form-check-input" id="RessourceSocial" type="checkbox" />
-							<label class="form-check-label" for="RessourceSocial">Energieversorger</label>
+							<label class="form-check-label" for="RessourceSocial"><img style="height:64px;" src="wvv.png" /></label>
 						</div>
 						<div class="form-check form-switch">
 							<input class="form-check-input" id="RessourceLand" type="checkbox" />
-							<label class="form-check-label" for="RessourceLand">Gemeinde</label>
+							<label class="form-check-label" for="RessourceLand"><img style="height:64px;" src="wuerzburg.png" /></label>
 						</div>
-						<div class="form-check form-switch">
-							<input class="form-check-input" id="RessourceWorker" type="checkbox" />
-							<label class="form-check-label" for="RessourceWorker">Telekom</label>
-						</div>
-
 					</div>
-					<div class="col mt-3 ms-3 bg-light border-primary">
-						<label>Vermarktung</label>
+					<div class="card col mt-3 ms-3 bg-light border-primary">
+						<h4 class="card-header">Vermarktung</h4>
 						<div class="form-check form-switch">
 							<input class="form-check-input" id="RessourceCrowd" type="checkbox" />
 							<label class="form-check-label" for="RessourceCrowd">Regionalzeitung</label>
@@ -131,8 +129,8 @@
 						</div>
 
 					</div>
-					<div class="col mt-3 ms-3 bg-light border-primary">
-						<label>Preise</label>
+					<div class="card col mt-3 ms-3 bg-light border-primary">
+						<h4 class="card-header">Preise</h4>
 						<div class="form-check form-switch">
 							<input class="form-check-input" id="PriceTrophy" type="checkbox" />
 							<label class="form-check-label" for="PriceTrophy">Pokal</label>
@@ -151,9 +149,11 @@
 						</div>
 
 					</div>
-					<div class="col m-3 p-3 bg-light border-primary">
-						<button type="submit" class="btn btn-primary">Speichern</button>
-						<button type="reset" class="btn btn-secondary">Abbrechen</button>
+					<div class="card col m-3 p-3 bg-light border-primary">
+						<div class="card-footer">
+							<button type="submit" class="btn btn-primary">Speichern</button>
+							<button type="reset" class="btn btn-secondary">Abbrechen</button>
+						</div>
 					</div>
 			</div>
 			</form>
